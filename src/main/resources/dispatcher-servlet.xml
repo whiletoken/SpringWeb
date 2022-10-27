@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--如果Action中书写的是视图逻辑名称，那么视图解析器就必须配置
+        如果Action中书写的是视图真实名称，那么视图解析器就可选配置-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 路径前缀 -->
+        <property name="prefix" value="/"/>
+        <!-- 路径后缀 -->
+        <property name="suffix" value=".jsp"/>
+        <!-- 前缀+视图逻辑名+后缀=真实路径 -->
+    </bean>
+
+</beans>
