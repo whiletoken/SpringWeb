@@ -209,11 +209,14 @@
                         </goals>
                         <phase>package</phase>
                         <configuration>
+                            <!--http请求前缀 改成自己项目对应的前缀-->
                             <path>/app</path>
+                            <!--tomcat server.xml 配置，否则使用默认-->
                             <serverXml>src/main/tomcat/server.xml</serverXml>
                             <finalName>app-exec.jar</finalName>
                             <enableNaming>true</enableNaming>
                             <warRunDependencies>
+                                <!--需要达成jar包的war-->
                                 <warRunDependency>
                                     <dependency>
                                         <groupId>org.example</groupId>
